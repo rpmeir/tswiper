@@ -11,6 +11,12 @@
             "email": "rpmeir@gmail.com"
         }
     ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/rpmeir/tswiper"
+        }
+    ],
     "require": {},
     "autoload" : {
         "psr-4" : {
