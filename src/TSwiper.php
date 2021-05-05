@@ -8,9 +8,8 @@ use Adianti\Widget\Base\TStyle;
 /**
  * TSwiper Widget
  *
- * @version    7.3
- * @package    widget
- * @subpackage util
+ * @version    0.9.0
+ * @package    tswiper
  * @author     Rodrigo Pires Meira
  */
 class TSwiper extends TElement
