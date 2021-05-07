@@ -8,7 +8,7 @@ use Adianti\Widget\Base\TStyle;
 /**
  * TSwiper Widget
  *
- * @version    0.9.0
+ * @version    v0.9.2-beta
  * @package    tswiper
  * @author     Rodrigo Pires Meira
  */
@@ -33,18 +33,14 @@ class TSwiper extends TElement
         $this->{'class'} = 'tswiper';
         $this->{'id'}    = 'tswiper_' . mt_rand(1000000000, 1999999999);
         $this->items = [];
-        $this->pagination = FALSE;
-        $this->arrows = FALSE;
-        $this->scrollbar = FALSE;
+        $this->pagination = false;
+        $this->arrows = false;
+        $this->scrollbar = false;
         $this->breakpoints = [];
         $this->options = [];
 
         $this->wrapper = new TElement('div');
         $this->wrapper->{'class'} = 'swiper-wrapper';
-
-        TStyle::importFromFile('vendor/rpmeir/tswiper/src/lib/css/swiper-bundle.min.css');
-        TStyle::importFromFile('vendor/rpmeir/tswiper/src/lib/css/tswiper.css');
-        TScript::importFromFile('vendor/rpmeir/tswiper/src/lib/js/swiper-bundle.min.js');
         
         parent::add($this->wrapper);
     }
@@ -314,7 +310,13 @@ class TSwiper extends TElement
 
         $options = json_encode($this->options);
 
-        TScript::create("$(function(){var swiper = new Swiper('.tswiper', $options);});");
+        TStyle::importFromFile('vendor/rpmeir/tswiper/src/lib/css/swiper-bundle.min.css');
+        TScript::importFromFile('vendor/rpmeir/tswiper/src/lib/js/swiper-bundle.min.js');
+
+        TStyle::importFromFile('vendor/rpmeir/tswiper/src/lib/css/tswiper.css');
+
+        // Sets 500 ms timeout to load dependencies 
+        TScript::create("$(function(){var swiper = new Swiper('.tswiper', $options);});", true, 500);
 
         parent::show();
     }

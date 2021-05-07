@@ -9,7 +9,7 @@ use ApplicationTranslator;
 /**
  * TSwiper Widget
  *
- * @version    0.9.0
+ * @version    v0.9.0-beta
  * @package    tswiper
  * @author     Rodrigo Pires Meira
  */
