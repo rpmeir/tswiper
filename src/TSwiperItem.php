@@ -7,9 +7,9 @@ use Adianti\Widget\Template\THtmlRenderer;
 use ApplicationTranslator;
 
 /**
- * TSwiper Widget
+ * TSwiperItem Widget
  *
- * @version    v0.9.0-beta
+ * @version    v0.9.3-beta
  * @package    tswiper
  * @author     Rodrigo Pires Meira
  */

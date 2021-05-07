@@ -8,7 +8,7 @@ use Adianti\Widget\Base\TStyle;
 /**
  * TSwiper Widget
  *
- * @version    v0.9.2-beta
+ * @version    v0.9.3-beta
  * @package    tswiper
  * @author     Rodrigo Pires Meira
  */
@@ -18,6 +18,7 @@ class TSwiper extends TElement
     private $wrapper;
     private $templatePath;
     private $itemTemplate;
+    private $itemHeight;
     private $pagination; // position bug on progressbar type, should stay on top of wrapper
     private $arrows; // minimal position bug on prev button
     private $scrollbar;
