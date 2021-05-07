@@ -41,6 +41,10 @@ class TSwiper extends TElement
 
         $this->wrapper = new TElement('div');
         $this->wrapper->{'class'} = 'swiper-wrapper';
+
+        TStyle::importFromFile('vendor/rpmeir/tswiper/src/lib/css/swiper-bundle.min.css');
+        TStyle::importFromFile('vendor/rpmeir/tswiper/src/lib/css/tswiper.css');
+        TScript::importFromFile('vendor/rpmeir/tswiper/src/lib/js/swiper-bundle.min.js');
         
         parent::add($this->wrapper);
     }
@@ -309,8 +313,6 @@ class TSwiper extends TElement
         }
 
         $options = json_encode($this->options);
-
-        TStyle::importFromFile('vendor/rpmeir/tswiper/lib/css/tswiper.css');
 
         TScript::create("$(function(){var swiper = new Swiper('.tswiper', $options);});");
 
