@@ -32,7 +32,7 @@ use Adianti\Widget\Util\TXMLBreadCrumb;
 /**
  * TSwiperView
  *
- * @version    v0.9.4
+ * @version    v1.0.0
  * @package    tswiper
  * @author     Rodrigo Pires Meira
  */
